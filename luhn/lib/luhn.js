@@ -17,8 +17,17 @@ def is_luhn_valid(card_number):
 
 */
 
-function digits_of(number) {
+function digitsOf(number) {
   return String(number).split("").map(Number);
+}
+
+function stepDown(arr, start, step) {
+  var result = [];
+  for(let i = arr.length + start; i >= 0; i += step) {
+    result.push(arr[i]);
+  }
+  // console.log(arr, start, step, result);
+  return result;
 }
 
 function isValidLuhnCard(cardNumber) {
@@ -26,4 +35,5 @@ function isValidLuhnCard(cardNumber) {
 }
 
 exports.isValidLuhnCard = isValidLuhnCard;
-exports.digits_of = digits_of;
+exports.digitsOf = digitsOf;
+exports.stepDown = stepDown;
