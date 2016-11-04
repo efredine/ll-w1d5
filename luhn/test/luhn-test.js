@@ -14,8 +14,17 @@ describe("luhn", function() {
     });
   });
   describe("isValidLuhnCard", function() {
-    it("should return true for 79927398713", function() {
+    it("should return true", function() {
       assert.isTrue(luhn.isValidLuhnCard(79927398713));
+    });
+    it("should return true", function() {
+      assert.isTrue(luhn.isValidLuhnCard(4351939048152074));
+    });
+    it("should return false", function() {
+      assert.isFalse(luhn.isValidLuhnCard(79927398710));
+    });
+    it("should return false", function() {
+      assert.isFalse(luhn.isValidLuhnCard(79927398711));
     });
   });
 });
