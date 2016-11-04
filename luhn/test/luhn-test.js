@@ -14,8 +14,8 @@ describe("luhn", function() {
     });
   });
   describe("isValidLuhnCard", function() {
-    it("should return true for 7992739L8713", function() {
-      assert.isTrue(luhn.isValidLuhnCard("79927398713".split("").map(Number)));
+    it("should return true for 79927398713", function() {
+      assert.isTrue(luhn.isValidLuhnCard(79927398713));
     });
   });
 });
